@@ -1,6 +1,6 @@
 {
     "name": "ethereum-store-verify-contract",
-    "version": "0.00.01",
+    "version": "0.00.02",
     "description": "An Ethereum contract which stores data and can verify them afterwards",
     "main": "index.js",
     "scripts": {
