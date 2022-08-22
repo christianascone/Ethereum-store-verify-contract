@@ -32,11 +32,16 @@ In order to install the project and all dependencies, enter in the project folde
 
 ---
 
-### Compile contract
+### Compile and deploy contract
 
 Move inside `contracts` folder, then:
 ```bash
 npx hardhat compile
+```
+
+Move to the project root and run deploy script:
+```bash
+npx hardhat --network mumbai run scripts/deploy.js
 ```
 
 ---
