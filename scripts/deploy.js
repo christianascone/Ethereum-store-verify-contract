@@ -1,7 +1,7 @@
 async function main() {
 
     const contract = require("../artifacts/contracts/ethereum-store-verify.sol/EthereumStoreVerify.json")
-    const EthereumStoreVerify = await ethers.getContractFactory(contract)
+    const EthereumStoreVerify = await ethers.getContractFactory(contract.abi, contract.bytecode)
 
     const ethereumStoreVerify = await EthereumStoreVerify.deploy()
     await ethereumStoreVerify.deployed()
