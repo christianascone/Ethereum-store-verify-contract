@@ -88,4 +88,4 @@ Copyright © 2022 [Christian Ascone](https://github.com/christianascone).
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/badge/npm-6.14.12-orange.svg
 [node-image]: https://img.shields.io/badge/node-14.16.1-orange.svg
-[project-image]: https://img.shields.io/badge/project-0.00.01-green.svg
+[project-image]: https://img.shields.io/badge/project-0.00.02-green.svg
