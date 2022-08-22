@@ -5,7 +5,7 @@
  require("@nomiclabs/hardhat-ethers");
  const { API_URL, PRIVATE_KEY } = process.env;
  module.exports = {
-   solidity: "0.8.9",
+   solidity: "0.8.16",
    defaultNetwork: "mumbai",
    networks: {
      hardhat: {},
