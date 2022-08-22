@@ -66,7 +66,7 @@ def open_close_release(new_version):
 
 
 filename = 'package.json'
-placeholder = '  "version": "'
+placeholder = '    "version": "'
 new_version = bump_version(filename, placeholder, -3, True)
 add_staging(filename)
 
