@@ -217,3 +217,4 @@ dist
 
 # Custom Solidity
 artifacts
+cache/solidity-files-cache.json

@@ -34,6 +34,7 @@ In order to install the project and all dependencies, enter in the project folde
 
 ### Compile contract
 
+Move inside `contracts` folder, then:
 ```bash
 npx hardhat compile
 ```
