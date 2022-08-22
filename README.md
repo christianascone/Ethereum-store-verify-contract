@@ -26,25 +26,19 @@
 
 ---
 
-<!-- ### **Installation**
+### **Installation**
 
 In order to install the project and all dependencies, enter in the project folder and run `npm install`
 
 ---
 
-### Start the project
+### Compile contract
 
 ```bash
-npm start
+npx hardhat compile
 ```
 
-### Test the project
-
-```bash
-npm test
-```
-
---- -->
+---
 
 
 ## **:handshake: Contributing**
