@@ -1,6 +1,6 @@
 {
     "name": "ethereum-store-verify-contract",
-    "version": "0.01.00",
+    "version": "0.02.00",
     "description": "An Ethereum contract which stores data and can verify them afterwards",
     "main": "index.js",
     "scripts": {
@@ -23,7 +23,9 @@
     },
     "homepage": "https://github.com/christianascone/Ethereum-store-verify-contract#readme",
     "devDependencies": {
+        "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
         "@nomiclabs/hardhat-ethers": "^2.1.1",
+        "chai": "^4.3.6",
         "ethers": "^5.7.0",
         "hardhat": "^2.10.2"
     },

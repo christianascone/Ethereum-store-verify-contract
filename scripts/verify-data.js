@@ -17,7 +17,7 @@ const contract = require("../artifacts/contracts/ethereum-store-verify.sol/Ether
 const contractAddress = process.env.CONTRACT_ADDRESS
 const contractObject = new web3.eth.Contract(contract.abi, contractAddress)
 
-async function verify(tokenURI) {
+async function verifyData(tokenURI) {
     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest') //get latest nonce
 
     //the transaction
@@ -25,7 +25,7 @@ async function verify(tokenURI) {
         'from': PUBLIC_KEY, // Sender
         'to': contractAddress, // Contract address
         'nonce': nonce,
-        'data': contractObject.methods.verify(tokenURI).encodeABI()
+        'data': contractObject.methods.verifyData(tokenURI).encodeABI()
     }
 
     let hexString = await web3.eth.call(tx);
@@ -33,7 +33,7 @@ async function verify(tokenURI) {
     isVerified ? console.log("Data verified!") : console.error("VERIFICATION FAILED!!!");
 }
 
-verify({
+verifyData({
     eventType: process.argv[2],
     eventId: process.argv[3],
     uuid: process.argv[4],

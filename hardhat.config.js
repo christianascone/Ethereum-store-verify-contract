@@ -3,6 +3,7 @@
  */
  require('dotenv').config();
  require("@nomiclabs/hardhat-ethers");
+ require("@nomicfoundation/hardhat-chai-matchers")
  const { API_URL, PRIVATE_KEY } = process.env;
  module.exports = {
    solidity: "0.8.16",
