@@ -5,6 +5,11 @@
 ![NPM Version][npm-image]
 ![Node Version][node-image]
 
+
+## References
+- https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/
+- https://ethereum.org/en/developers/tutorials/how-to-mint-an-nft/
+
 ---
 
 ## **:package: Main tools used**
