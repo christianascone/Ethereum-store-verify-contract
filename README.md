@@ -39,14 +39,29 @@ In order to install the project and all dependencies, enter in the project folde
 
 ### Compile and deploy contract
 
-Move inside `contracts` folder, then:
+Compile:
 ```bash
 npx hardhat compile
 ```
 
-Move to the project root and run deploy script:
+Deploy:
 ```bash
 npx hardhat --network mumbai run scripts/deploy.js
+```
+
+---
+
+
+### Running
+
+Store data in contract:
+```bash
+node scripts/add-data.js EVENT_TYPE 1 123e4567-e89b-12d3-a456-426614174000 data1 data2 123
+```
+
+Verify given data are the same stored in contract:
+```bash
+node scripts/verify-data.js EVENT_TYPE 1 123e4567-e89b-12d3-a456-426614174000 data1 data2 123
 ```
 
 ---
