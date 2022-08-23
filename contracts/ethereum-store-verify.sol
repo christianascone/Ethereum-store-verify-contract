@@ -17,6 +17,8 @@ contract EthereumStoreVerify is Ownable {
     }
     mapping(string => StoreData) dataArray;
 
+    event StoredDataEvent(string);
+
     /**
      * Stores the given data using a unique identifier.
      * Can be called only be the owner and it checks the object does not already exists.
@@ -27,12 +29,13 @@ contract EthereumStoreVerify is Ownable {
         require(!existing.initialized);
         _data.initialized = true;
         dataArray[identifier] = _data;
+        emit StoredDataEvent(identifier);
     }
 
     /**
      * Verifies if given data are stored in contract and they are equal.
      */
-    function verify(StoreData memory _data) public view returns (bool) {
+    function verifyData(StoreData memory _data) public view returns (bool) {
         string memory identifier = buildIdentifier(_data);
         StoreData memory storedData = dataArray[identifier];
         return
