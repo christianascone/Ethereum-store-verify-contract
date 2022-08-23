@@ -5,6 +5,11 @@
 ![NPM Version][npm-image]
 ![Node Version][node-image]
 
+
+## References
+- https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/
+- https://ethereum.org/en/developers/tutorials/how-to-mint-an-nft/
+
 ---
 
 ## **:package: Main tools used**
@@ -34,14 +39,29 @@ In order to install the project and all dependencies, enter in the project folde
 
 ### Compile and deploy contract
 
-Move inside `contracts` folder, then:
+Compile:
 ```bash
 npx hardhat compile
 ```
 
-Move to the project root and run deploy script:
+Deploy:
 ```bash
 npx hardhat --network mumbai run scripts/deploy.js
+```
+
+---
+
+
+### Running
+
+Store data in contract:
+```bash
+node scripts/add-data.js EVENT_TYPE 1 123e4567-e89b-12d3-a456-426614174000 data1 data2 123
+```
+
+Verify given data are the same stored in contract:
+```bash
+node scripts/verify-data.js EVENT_TYPE 1 123e4567-e89b-12d3-a456-426614174000 data1 data2 123
 ```
 
 ---
@@ -88,4 +108,4 @@ Copyright © 2022 [Christian Ascone](https://github.com/christianascone).
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/badge/npm-6.14.12-orange.svg
 [node-image]: https://img.shields.io/badge/node-14.16.1-orange.svg
-[project-image]: https://img.shields.io/badge/project-0.00.02-green.svg
+[project-image]: https://img.shields.io/badge/project-0.01.00-green.svg

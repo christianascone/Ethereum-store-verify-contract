@@ -1,6 +1,6 @@
 {
     "name": "ethereum-store-verify-contract",
-    "version": "0.00.02",
+    "version": "0.01.00",
     "description": "An Ethereum contract which stores data and can verify them afterwards",
     "main": "index.js",
     "scripts": {
@@ -28,6 +28,7 @@
         "hardhat": "^2.10.2"
     },
     "dependencies": {
+        "@alch/alchemy-web3": "^1.4.6",
         "@openzeppelin/contracts": "^4.7.3",
         "dotenv": "^16.0.1"
     }
