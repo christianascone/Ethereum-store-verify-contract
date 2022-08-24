@@ -106,6 +106,14 @@ Feel free to open issues or submit pull-requests to help me improving my work.
 
 ### **:scroll: Release history**
 
+* 0.02.01
+    * Add localhost configuration
+    * Refactor tests
+* 0.02.00
+    * Renamed "verify" to "verifyData"
+    * Add tests
+* 0.01.00
+    * First working version with "add" and "verify" functions
 * 0.00.01
     * Work in progress
 
