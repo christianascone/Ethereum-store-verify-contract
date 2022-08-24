@@ -48,6 +48,10 @@ Deploy:
 ```bash
 npx hardhat --network mumbai run scripts/deploy.js
 ```
+or locally
+```bash
+npx hardhat --network localhost run scripts/deploy.js
+```
 
 ---
 

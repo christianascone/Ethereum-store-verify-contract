@@ -36,4 +36,44 @@ describe("EthereumStoreVerify", function () {
     result = await box.verifyData(input)
     expect(result).to.be.false
   })
+
+  it("should not verify stored data because data are not the same", async function () {
+    let input = {
+      eventType: "EVENT",
+      eventId: 1,
+      uuid: "my_uuid",
+      data1: "data",
+      data2: "data",
+      data3: 1234,
+      initialized: true
+    }
+
+    // Wait in order to ensure data are stored
+    await expect(box.add(input))
+      .to.emit(box, "StoredDataEvent");
+
+    input.eventId = 100
+    result = await box.verifyData(input)
+    expect(result).to.be.false
+  })
+
+  it("should not verify stored data because object is not found", async function () {
+    let input = {
+      eventType: "EVENT",
+      eventId: 1,
+      uuid: "my_uuid",
+      data1: "data",
+      data2: "data",
+      data3: 1234,
+      initialized: true
+    }
+
+    // Wait in order to ensure data are stored
+    await expect(box.add(input))
+      .to.emit(box, "StoredDataEvent");
+
+    input.data1 = "different"
+    result = await box.verifyData(input)
+    expect(result).to.be.false
+  })
 })
