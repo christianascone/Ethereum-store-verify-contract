@@ -53,6 +53,12 @@ npx hardhat --network mumbai run scripts/deploy.js
 
 ### Test the project
 
+Run a local node using hardhat
+```bash
+npx hardhat node
+```
+
+Then run tests
 ```bash
 npx hardhat test
 ```
