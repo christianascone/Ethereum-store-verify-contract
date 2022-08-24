@@ -7,7 +7,7 @@
  const { API_URL, PRIVATE_KEY } = process.env;
  module.exports = {
    solidity: "0.8.16",
-   defaultNetwork: "mumbai",
+   defaultNetwork: "localhost",
    networks: {
      hardhat: {},
      mumbai: {

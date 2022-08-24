@@ -48,11 +48,21 @@ Deploy:
 ```bash
 npx hardhat --network mumbai run scripts/deploy.js
 ```
+or locally
+```bash
+npx hardhat --network localhost run scripts/deploy.js
+```
 
 ---
 
 ### Test the project
 
+Run a local node using hardhat
+```bash
+npx hardhat node
+```
+
+Then run tests
 ```bash
 npx hardhat test
 ```
@@ -96,6 +106,14 @@ Feel free to open issues or submit pull-requests to help me improving my work.
 
 ### **:scroll: Release history**
 
+* 0.02.01
+    * Add localhost configuration
+    * Refactor tests
+* 0.02.00
+    * Renamed "verify" to "verifyData"
+    * Add tests
+* 0.01.00
+    * First working version with "add" and "verify" functions
 * 0.00.01
     * Work in progress
 
@@ -115,4 +133,4 @@ Copyright © 2022 [Christian Ascone](https://github.com/christianascone).
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/badge/npm-6.14.12-orange.svg
 [node-image]: https://img.shields.io/badge/node-14.16.1-orange.svg
-[project-image]: https://img.shields.io/badge/project-0.02.00-green.svg
+[project-image]: https://img.shields.io/badge/project-0.02.01-green.svg
